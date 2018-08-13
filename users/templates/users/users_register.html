@@ -1,0 +1,28 @@
+{% load static from staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>register with us</title>
+    <link rel="stylesheet" href="{% static 'resources/css/stylesPlanningPage.css' %}">
+</head>
+<body>
+{#<form method="POST">#}
+{#    {{ form.as_p }}#}
+{#    {% csrf_token %}#}
+{#    <input type="submit" value="Register!">#}
+{#</form>#}
+
+<form method="POST">
+    {% csrf_token %}
+    <input type="text" placeholder="First Name" name="{{ form.first_name.html_name }}" required>
+    <input type="text" placeholder="Last Name" name="{{ form.last_name.html_name }}" required>
+    <input type="email" placeholder="Email" name="{{ form.email.html_name }}" required>
+
+    <input type="submit" value="Submit">
+
+</form>
+
+
+</body>
+</html>

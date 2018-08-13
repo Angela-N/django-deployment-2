@@ -1,0 +1,34 @@
+{% load static from staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>events page</title>
+    <link rel="stylesheet" href="{% static 'resources/css/index.css' %}">
+</head>
+<body>
+<h2>EVENTS HOME</h2>
+
+
+<h2>Here is your DB</h2>
+
+{% if access_records %}
+<table>
+    <thead>
+        <th>Site Name</th>
+        <th>Date Accessed</th>
+    </thead>
+    {% for access_record in access_records %}
+        <tr>
+        <td>{{ access_record.name }}</td>
+        <td>{{ access_record.date }}</td>
+        </tr>
+    {% endfor %}
+
+</table>
+{% endif %}
+
+
+
+</body>
+</html>

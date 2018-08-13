@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>School Details</title>
+</head>
+<body>
+
+<h1>School Detail</h1>
+
+<h2>School Name: {{ school.name }}</h2>
+<h3>Principal: {{ school.principal }}</h3>
+<h3>Motto: {{ school.motto }}</h3>
+
+<h2>Students</h2>
+
+{#remember the model related name#}
+{% for student in school.students.all %}
+    <p>{{ student.name }} who is {{ student.age }} years old</p>
+{% endfor %}
+
+
+</body>
+</html>

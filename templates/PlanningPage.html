@@ -1,0 +1,30 @@
+{% load static from staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PlanningPage</title>
+    <link rel="stylesheet" href="{% static 'resources/css/stylesPlanningPage.css' %}">
+</head>
+<body>
+<h1>This is the Planning page</h1>
+{{ var }}
+
+{% for item in var2 %}
+    <ul>
+        <li>{{ item }}</li>
+    </ul>
+{% endfor %}
+
+<form action="/my-handling-form-page" method="post">
+  <fieldset>
+    <legend>Let's Chat:</legend>
+    We'd like to hear your thoughts :) :<br>
+    <input type="text" id="id_username" name="Enter info here:"><br>
+    <input type="submit" value="Submit">
+  </fieldset>
+</form>
+
+
+</body>
+</html>

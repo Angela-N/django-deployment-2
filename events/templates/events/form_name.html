@@ -1,0 +1,21 @@
+{% load static from staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>form_name</title>
+    <link rel="stylesheet" href="{% static 'resources/css/stylesPlanningPage.css' %}">
+</head>
+<body>
+<div class="container">
+    <form class = "" action="form_name.html" method="post">
+        {{ form.as_p }}
+        {% csrf_token %}
+        <input type="submit" class="btn btn-primary" value="Submit">
+{#        <input type="text" placeholder="Name" name="{{ form.name.html_name }}">#}
+    </form>
+</div>
+
+
+</body>
+</html>

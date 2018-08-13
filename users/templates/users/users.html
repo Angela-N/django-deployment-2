@@ -1,0 +1,25 @@
+{% load static from staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>users</title>
+    <link rel="stylesheet" href="{% static 'resources/css/stylesPlanningPage.css' %}">
+</head>
+<body>
+<h2>Here are the Users</h2>
+
+{% if users %}
+    {% for user in users %}
+{#        <ul>#}
+{#            <li>{{ user.first_name }}</li>#}
+{#            <li>{{ user.last_name }}</li>#}
+{#            <li>{{ user.email }}</li>#}
+{#        </ul>#}
+        <h4>{{ user.first_name }} {{ user.last_name }}</h4>
+        <p>{{ user.email }}</p>
+    {% endfor %}
+{% endif %}
+
+</body>
+</html>
