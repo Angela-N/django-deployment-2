@@ -19,6 +19,10 @@
     <p>{{ student.name }} who is {{ student.age }} years old</p>
 {% endfor %}
 
+<a href="{% url 'schools:update' pk=school.pk %}">Update</a>
+
+<a href="{% url 'schools:delete' pk=school.pk %}">Delete</a>
+
 
 </body>
 </html>

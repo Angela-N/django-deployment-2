@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create School</title>
+</head>
+<body>
+
+<h1>
+    {% if not form.instance.pk %}
+        Create School
+    {% else %}
+        Update School
+    {% endif %}
+</h1>
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+
+    {% if not form.instance.pk %}
+        <input type="submit" value="Create School">
+    {% else %}
+        <input type="submit" value="Update School Details">
+    {% endif %}
+
+</form>
+
+
+</body>
+</html>

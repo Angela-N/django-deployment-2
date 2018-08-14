@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Confirm Delete</title>
+</head>
+<body>
+
+<h1>Delete {{ school.name }}? </h1>
+
+<form method="post">
+    {% csrf_token %}
+    <input type="submit" value="Delete">
+    <a href="{% url 'schools:school_details' pk=school.pk %}">Cancel</a>
+</form>
+
+
+</body>
+</html>
